@@ -1,1 +1,140 @@
-Hello World
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Celebrate the Grad</title>
+  <meta name="description" content="Enter your code to view your graduate’s celebration page." />
+  <link rel="stylesheet" href="/assets/site.css" />
+</head>
+<body>
+  <header class="top">
+    <div class="wrap topInner">
+      <a class="brand" href="/" aria-label="Celebrate the Grad home">
+        <span class="brandMark" aria-hidden="true">🎓</span>
+        <span class="brandText">Celebrate the Grad</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero card">
+      <div class="heroLeft">
+        <p class="badge">Class of 2026 vibes</p>
+        <h1>Let’s celebrate your graduate</h1>
+        <p class="lead">
+          Enter the code from your invitation to open the right page. It takes about two seconds.
+        </p>
+
+        <form id="codeForm" class="codeForm" novalidate>
+          <label class="label" for="code">Graduate code</label>
+          <div class="row">
+            <input
+              id="code"
+              name="code"
+              placeholder="Example: A7K3"
+              maxlength="12"
+              inputmode="latin"
+              autocomplete="one-time-code"
+              aria-describedby="hint errorBox"
+            />
+            <button class="btn" type="submit">Open</button>
+          </div>
+
+          <p id="hint" class="hint">Letters and numbers only. If you scanned a QR code, you usually won’t need this.</p>
+          <div id="errorBox" class="error" role="alert" hidden>Please enter a valid code.</div>
+        </form>
+
+        <div class="miniInfo">
+          <div class="miniCard">
+            <div class="miniIcon" aria-hidden="true">📸</div>
+            <div>
+              <div class="miniTitle">Photos</div>
+              <div class="miniText">A few favorites</div>
+            </div>
+          </div>
+          <div class="miniCard">
+            <div class="miniIcon" aria-hidden="true">🎉</div>
+            <div>
+              <div class="miniTitle">Party details</div>
+              <div class="miniText">Date, time, location</div>
+            </div>
+          </div>
+          <div class="miniCard">
+            <div class="miniIcon" aria-hidden="true">💙</div>
+            <div>
+              <div class="miniTitle">Gifting</div>
+              <div class="miniText">Venmo and PayPal</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="heroRight" aria-hidden="true">
+        <div class="confetti">
+          <span>✨</span><span>🎈</span><span>🎊</span><span>⭐</span><span>🎉</span><span>💫</span>
+          <span>🎓</span><span>✨</span><span>🎈</span><span>🎊</span><span>⭐</span><span>🎉</span>
+        </div>
+        <div class="poster">
+          <div class="posterTop">
+            <div class="posterCap">🎓</div>
+            <div class="posterText">
+              <div class="posterTitle">Congrats!</div>
+              <div class="posterSub">Scan the QR or enter your code</div>
+            </div>
+          </div>
+          <div class="posterBottom">
+            <div class="sparkLine"></div>
+            <div class="posterFoot">CelebrateTheGrad.com</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card info">
+      <h2>Having trouble?</h2>
+      <ul class="bullets">
+        <li>Double-check the code on the invitation (letters and numbers only).</li>
+        <li>If you were sent a link, use that link instead of typing.</li>
+        <li>If it still doesn’t load, go back and try the code again.</li>
+      </ul>
+    </section>
+
+    <footer class="footer">
+      <p class="muted">Celebrate the Grad</p>
+    </footer>
+  </main>
+
+  <script>
+    (function () {
+      const form = document.getElementById("codeForm");
+      const input = document.getElementById("code");
+      const errorBox = document.getElementById("errorBox");
+
+      function normalize(raw) {
+        return (raw || "").trim().toUpperCase().replace(/[^A-Z0-9]/g, "");
+      }
+
+      function isValid(code) {
+        return code.length >= 3 && code.length <= 12;
+      }
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        errorBox.hidden = true;
+
+        const code = normalize(input.value);
+        input.value = code;
+
+        if (!isValid(code)) {
+          errorBox.hidden = false;
+          input.focus();
+          return;
+        }
+
+        window.location.href = "/g/" + code + "/";
+      });
+    })();
+  </script>
+</body>
+</html>
