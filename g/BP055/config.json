@@ -34,10 +34,4 @@
     "paypalMe": "joecook100",
     "defaultNote": "Congratulations Morgan and Madison!"
   }
-    "rsvp": {
-    "enabled": true,
-    "title": "RSVP",
-    "embedUrl": "https://forms.gle/RCpYKMPwNToL1czQ7",
-    "openUrl": "https://forms.gle/RCpYKMPwNToL1czQ7"
-  }
 }
