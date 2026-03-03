@@ -198,7 +198,7 @@
       ${
   about || about2
     ? `
-      <h2>About</h2>
+      <h2>About Us</h2>
       ${about ? `<p>${escapeHtml(about)}</p>` : ""}
       ${about2 ? `<p>${escapeHtml(about2)}</p>` : ""}
     `
