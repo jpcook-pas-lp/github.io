@@ -67,7 +67,7 @@
     const school = grad.school || "";
     const year = grad.year || "";
     const about = grad.about || "";
-    const about2= grad.about || "";
+    const about2= grad.about2 || "";
 
     const photos = Array.isArray(cfg.photos) ? cfg.photos.slice(0, 3) : [];
 
