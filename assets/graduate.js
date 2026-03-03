@@ -67,6 +67,7 @@
     const school = grad.school || "";
     const year = grad.year || "";
     const about = grad.about || "";
+    const about2= grad.about || "";
 
     const photos = Array.isArray(cfg.photos) ? cfg.photos.slice(0, 3) : [];
 
@@ -194,7 +195,15 @@
         }
       </div>
 
-      ${about ? `<h2>About</h2><p>${escapeHtml(about)}</p>` : ""}
+      ${
+  about || about2
+    ? `
+      <h2>About</h2>
+      ${about ? `<p>${escapeHtml(about)}</p>` : ""}
+      ${about2 ? `<p>${escapeHtml(about2)}</p>` : ""}
+    `
+    : ""
+}
 
       ${photosHtml}
 
