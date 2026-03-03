@@ -14,13 +14,14 @@
     return Number(n).toFixed(2);
   }
 
-  function renderNotFound() {
+  function renderNotFound(details) {
     app.innerHTML = `
-      <h1>We couldn’t find that page</h1>
+      <h1>We couldn’t load this page</h1>
       <p class="muted">
-        The code might be incorrect or this page is no longer available.
+        This usually means the config file is missing or invalid.
       </p>
-      <div class="pills" style="margin-top:16px;">
+      ${details ? `<div class="error"><strong>Details:</strong> ${escapeHtml(details)}</div>` : ""}
+      <div style="margin-top:16px;">
         <a class="btnSecondary" href="/">Back to homepage</a>
       </div>
     `;
@@ -59,6 +60,7 @@
     const grad = cfg.graduate || {};
     const party = cfg.party || {};
     const payments = cfg.payments || {};
+    const rsvp = cfg.rsvp || {};
 
     const name = grad.name || "Graduate";
     const headline = grad.headline || "";
@@ -66,9 +68,7 @@
     const year = grad.year || "";
     const about = grad.about || "";
 
-    const photos = Array.isArray(cfg.photos)
-      ? cfg.photos.slice(0, 3)
-      : [];
+    const photos = Array.isArray(cfg.photos) ? cfg.photos.slice(0, 3) : [];
 
     const note = payments.defaultNote || `Congrats ${name}!`;
     const noteEncoded = encodeURIComponent(note);
@@ -81,16 +81,12 @@
     const paypalMe = (payments.paypalMe || "").trim();
 
     const otherLinks = [];
-
     if (venmoUser) {
       otherLinks.push({
         label: "Venmo other amount",
-        href: `https://venmo.com/${encodeURIComponent(
-          venmoUser
-        )}?txn=pay&note=${noteEncoded}`
+        href: `https://venmo.com/${encodeURIComponent(venmoUser)}?txn=pay&note=${noteEncoded}`
       });
     }
-
     if (paypalMe) {
       otherLinks.push({
         label: "PayPal other amount",
@@ -101,10 +97,7 @@
     const mapQuery = encodeURIComponent(
       [party.locationName, party.address].filter(Boolean).join(" ")
     );
-
-    const mapLink = mapQuery
-      ? `https://www.google.com/maps/search/?api=1&query=${mapQuery}`
-      : "";
+    const mapLink = mapQuery ? `https://www.google.com/maps/search/?api=1&query=${mapQuery}` : "";
 
     const photosHtml = photos.length
       ? `
@@ -126,15 +119,57 @@
       `
       : "";
 
+    const rsvpEnabled = !!rsvp.enabled;
+    const rsvpTitle = rsvp.title || "RSVP";
+    const embedUrl = (rsvp.embedUrl || "").trim();
+    const openUrl = (rsvp.openUrl || "").trim() || embedUrl.replace("embedded=true", "").trim();
+
+    const rsvpHtml =
+      rsvpEnabled
+        ? `
+          <h2>${escapeHtml(rsvpTitle)}</h2>
+          <p class="muted">Please RSVP using the form below.</p>
+
+          ${
+            embedUrl
+              ? `
+                <div class="embedWrap">
+                  <iframe
+                    title="${escapeHtml(rsvpTitle)} form"
+                    src="${escapeHtml(embedUrl)}"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                </div>
+              `
+              : `
+                <div class="error">
+                  RSVP is enabled, but no Google Form link is set in config.json.
+                </div>
+              `
+          }
+
+          ${
+            openUrl
+              ? `
+                <div style="margin-top:12px;">
+                  <a class="btnSecondary" href="${escapeHtml(openUrl)}" target="_blank" rel="noopener">
+                    Open RSVP form in a new tab
+                  </a>
+                </div>
+              `
+              : ""
+          }
+
+          <div class="note">
+            RSVP emails are sent by Google Forms to the form owner (make sure email notifications are turned on).
+          </div>
+        `
+        : "";
+
     app.innerHTML = `
       <h1>${escapeHtml(name)}</h1>
-      ${
-        headline
-          ? `<p class="muted" style="margin-top:6px;">${escapeHtml(
-              headline
-            )}</p>`
-          : ""
-      }
+      ${headline ? `<p class="muted" style="margin-top:6px;">${escapeHtml(headline)}</p>` : ""}
 
       <div class="kv">
         ${
@@ -159,14 +194,7 @@
         }
       </div>
 
-      ${
-        about
-          ? `
-        <h2>About</h2>
-        <p>${escapeHtml(about)}</p>
-      `
-          : ""
-      }
+      ${about ? `<h2>About</h2><p>${escapeHtml(about)}</p>` : ""}
 
       ${photosHtml}
 
@@ -174,28 +202,16 @@
       <div class="kv">
         <div class="kvBox">
           <div class="kvLabel">Date</div>
-          <div class="kvValue">${escapeHtml(
-            party.date || "TBD"
-          )}</div>
+          <div class="kvValue">${escapeHtml(party.date || "TBD")}</div>
         </div>
         <div class="kvBox">
           <div class="kvLabel">Time</div>
-          <div class="kvValue">${escapeHtml(
-            party.time || "TBD"
-          )}</div>
+          <div class="kvValue">${escapeHtml(party.time || "TBD")}</div>
         </div>
         <div class="kvBox">
           <div class="kvLabel">Location</div>
-          <div class="kvValue">${escapeHtml(
-            party.locationName || "TBD"
-          )}</div>
-          ${
-            party.address
-              ? `<div class="muted" style="margin-top:6px;">${escapeHtml(
-                  party.address
-                )}</div>`
-              : ""
-          }
+          <div class="kvValue">${escapeHtml(party.locationName || "TBD")}</div>
+          ${party.address ? `<div class="muted" style="margin-top:6px;">${escapeHtml(party.address)}</div>` : ""}
           ${
             mapLink
               ? `<div style="margin-top:10px;">
@@ -211,14 +227,14 @@
             ? `
           <div class="kvBox">
             <div class="kvLabel">Notes</div>
-            <div class="kvValue">${escapeHtml(
-              party.notes
-            )}</div>
+            <div class="kvValue">${escapeHtml(party.notes)}</div>
           </div>
         `
             : ""
         }
       </div>
+
+      ${rsvpHtml}
 
       <h2>Send a gift</h2>
       <p class="muted">Choose an amount below or select other.</p>
@@ -278,11 +294,11 @@
   async function init() {
     try {
       const res = await fetch("./config.json", { cache: "no-store" });
-      if (!res.ok) return renderNotFound();
+      if (!res.ok) return renderNotFound("config.json was not found (HTTP " + res.status + ").");
       const cfg = await res.json();
       render(cfg);
     } catch (err) {
-      renderNotFound();
+      renderNotFound(err && err.message ? err.message : "Unknown error loading config.");
     }
   }
 
