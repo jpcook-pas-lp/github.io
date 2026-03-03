@@ -5,20 +5,20 @@
     "headline": "Class of 2026",
     "school": "Bethel Park High School",
     "year": "2026",
-    "about": "Brady is graduating this spring and heading into an exciting new chapter. Thank you for celebrating this milestone with us."
+    "about": "Morgan will be attending Ohio Northern Univeristy in the Fall and playing lacrosse and studiing Sports Medicine. Madison will be attending Slippery Rock University and studiing secondary education"
   },
   "photos": [
     {
-      "src": "./photos/01.jpg",
-      "alt": "Brady in cap and gown"
+      "src": "./photos/photo03.jpg",
+      "alt": "Madison"
     },
     {
-      "src": "./photos/02.jpg",
-      "alt": "Brady with family"
+      "src": "./photos/photo01.jpg",
+      "alt": "Morgan and Madison together"
     },
     {
-      "src": "./photos/03.jpg",
-      "alt": "Brady graduation portrait"
+      "src": "./photos/photo02.jpg",
+      "alt": "Morgan"
     }
   ],
   "party": {
