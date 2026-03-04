@@ -234,7 +234,7 @@ input:focus, textarea:focus{
 
 .bannerImg{
   width: 100%;
-  height: 260px;       /* adjust this */
+  height: 285px;       /* adjust this */
   object-fit: cover;
   display: block;
 }
@@ -243,7 +243,7 @@ input:focus, textarea:focus{
 
 @media (max-width: 768px){
   .bannerImg{
-    min-height: 160px;
+    min-height: 285px;
   }
 
   .heroTitle{
