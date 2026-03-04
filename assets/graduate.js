@@ -1,4 +1,4 @@
-function () {
+(function () {
   const app = document.getElementById("app");
 
   function escapeHtml(str) {
