@@ -226,7 +226,6 @@ input:focus, textarea:focus{
   color:#5b8084;
 }
 /* HERO HEADER */
-
 .hero{
   position: relative;
   background-image: url("/assets/header01.png");
