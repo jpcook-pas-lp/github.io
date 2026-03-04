@@ -234,15 +234,16 @@ input:focus, textarea:focus{
 
 .bannerImg{
   width: 100%;
-  height: auto;
-  display: block; /* removes the little gap under images */
+  height: 260px;       /* adjust this */
+  object-fit: cover;
+  display: block;
 }
 
 /* Mobile adjustments */
 
 @media (max-width: 768px){
-  .hero{
-    min-height: 240px;
+  .bannerImg{
+    min-height: 160px;
   }
 
   .heroTitle{
