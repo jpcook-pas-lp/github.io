@@ -1,4 +1,4 @@
-(function () {
+(412) 738-5684(function () {
   const app = document.getElementById("app");
 
   function escapeHtml(str) {
@@ -198,7 +198,7 @@
       ${
   about || about2
     ? `
-      <h2>About Us</h2>
+      <h2>Our Plans for the Future</h2>
       ${about ? `<p>${escapeHtml(about)}</p>` : ""}
       ${about2 ? `<p>${escapeHtml(about2)}</p>` : ""}
     `
