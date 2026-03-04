@@ -1,4 +1,4 @@
-(412) 738-5684(function () {
+(function () {
   const app = document.getElementById("app");
 
   function escapeHtml(str) {
