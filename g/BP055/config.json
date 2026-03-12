@@ -10,15 +10,15 @@
   },
   "photos": [
     {
-      "src": "./photos/photo03.jpg",
+      "src": "./photos/photo01.jpg",
       "alt": "Madison"
     },
     {
-      "src": "./photos/photo01.jpg",
+      "src": "./photos/photo02.jpg",
       "alt": "Morgan and Madison together"
     },
     {
-      "src": "./photos/photo02.jpg",
+      "src": "./photos/photo03.jpg",
       "alt": "Morgan"
     }
   ],
