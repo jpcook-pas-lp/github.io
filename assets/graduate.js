@@ -102,7 +102,7 @@
 
     const photosHtml = photos.length
       ? `
-        <h2>Photos</h2>
+      
         <div class="grid">
           ${photos
             .map(
