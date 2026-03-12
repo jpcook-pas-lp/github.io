@@ -171,30 +171,7 @@
     app.innerHTML = `
       <h1>${escapeHtml(name)}</h1>
       ${headline ? `<p class="muted" style="margin-top:6px;">${escapeHtml(headline)}</p>` : ""}
-
-      <div class="kv">
-        ${
-          school
-            ? `
-          <div class="kvBox">
-            <div class="kvLabel">School</div>
-            <div class="kvValue">${escapeHtml(school)}</div>
-          </div>
-        `
-            : ""
-        }
-        ${
-          year
-            ? `
-          <div class="kvBox">
-            <div class="kvLabel">Class of</div>
-            <div class="kvValue">${escapeHtml(year)}</div>
-          </div>
-        `
-            : ""
-        }
-      </div>
-
+ 
       ${
   about || about2
     ? `
