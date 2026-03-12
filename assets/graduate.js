@@ -171,6 +171,8 @@
     app.innerHTML = `
       <h1>${escapeHtml(name)}</h1>
       ${headline ? `<p class="muted" style="margin-top:6px;">${escapeHtml(headline)}</p>` : ""}
+
+  ${photosHtml}
  
       ${
   about || about2
@@ -181,8 +183,6 @@
     `
     : ""
 }
-
-      ${photosHtml}
 
       <h2>Party details</h2>
       <div class="kv">
