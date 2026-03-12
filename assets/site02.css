@@ -158,11 +158,11 @@ input:focus, textarea:focus{
 
 .photo{
   width:100%;
-  object-fit:cover;
+  height:auto;
+  object-fit:contain;
   border-radius:14px;
   border:1px solid var(--border);
   box-shadow: var(--shadow);
-}
 
 /* Mobile */
 
