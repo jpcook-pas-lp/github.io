@@ -132,23 +132,50 @@ input:focus, textarea:focus{
 
 /* Layout grids */
 
+/* Photo layout */
+
 .grid{
   display:grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap:12px;
-  margin-top: 12px;
+  grid-template-columns: 1fr 1fr;
+  gap:14px;
+  margin-top:14px;
 }
 
-@media (max-width: 860px){
-  .grid{ grid-template-columns: 1fr; }
+/* First photo becomes hero */
+
+.grid img:first-child{
+  grid-column: 1 / -1;
+  aspect-ratio: 16 / 9;
 }
+
+/* Remaining photos */
+
+.grid img:not(:first-child){
+  aspect-ratio: 4 / 3;
+}
+
+/* Photo styling */
 
 .photo{
   width:100%;
-  aspect-ratio: 4 / 3;
   object-fit:cover;
-  border-radius: 14px;
+  border-radius:14px;
   border:1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+/* Mobile */
+
+@media (max-width:700px){
+
+  .grid{
+    grid-template-columns: 1fr;
+  }
+
+  .grid img:first-child{
+    aspect-ratio: 4 / 3;
+  }
+
 }
 
 /* Key value blocks */
