@@ -170,7 +170,7 @@
 
     app.innerHTML = `
       <h1>${escapeHtml(name)}</h1>
-      ${headline ? `<p class="muted" style="margin-top:6px;">${escapeHtml(headline)}</p>` : ""}
+      ${headline ? `<h2 class="muted" style="margin-top:6px;">${escapeHtml(headline)}</h2>` : ""}
 
   ${photosHtml}
  
