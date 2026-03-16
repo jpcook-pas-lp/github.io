@@ -8,8 +8,23 @@
   <link rel="stylesheet" href="/assets/site02.css" />
 </head>
 <body>
-<header class="banner" aria-label="Celebrate the Grad">
-  <img class="bannerImg" src="/assets/header01.png" alt="Celebrate the Grad" />
+<header class="banner">
+
+  <picture>
+
+    <!-- Mobile image -->
+    <source 
+      media="(max-width:700px)" 
+      srcset="../../assets/header-mobile.png">
+
+    <!-- Desktop image -->
+    <img 
+      class="bannerImg"
+      src="../../assets/header01.png"
+      alt="Celebrate the Grad">
+
+  </picture>
+
 </header>
   <main class="wrap">
     <section class="hero card">
