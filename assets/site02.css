@@ -68,6 +68,7 @@ h1{
   margin: 6px 0 10px;
   font-size: 34px;
   color: var(--cyan);
+  text-align: center;
 }
 
 h2{
@@ -78,6 +79,7 @@ h2{
 
 .muted{
   color:#4f6f72;
+  text-align: center;
 }
 
 /* Buttons */
