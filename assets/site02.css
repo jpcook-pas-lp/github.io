@@ -164,6 +164,12 @@ input:focus, textarea:focus{
   border:1px solid var(--border);
   box-shadow: var(--shadow);
 }
+.form{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  margin-top:12px;
+}
 
 /* Mobile */
 
