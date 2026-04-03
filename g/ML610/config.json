@@ -1,0 +1,44 @@
+
+{
+  "graduate": {
+    "name": "Elise Stock",
+    "headline": "Mt. Lebanon High School Class of 2026",
+    "school": "Mt. Lebanon High School",
+    "year": "2026",
+    "about": "Elise will be attending West Virginia University and studying Electrical Engineering.",
+    "about2": ""
+  },
+  "photos": [
+    {
+      "src": "./photos/photo01.jpg",
+      "alt": "Elise"
+    },
+    {
+      "src": "./photos/photo02.jpg",
+      "alt": "Elise"
+    },
+    {
+      "src": "./photos/photo03.jpg",
+      "alt": "Elise"
+    }
+  ],
+  "party": {
+    "title": "Graduation Party",
+    "date": "Saturday, May 30th, 2026",
+    "time": "3:00 PM – 10:00 PM",
+    "locationName": "Stock House",
+    "address": "50 Carleton Drive Pittsburgh, PA15243",
+    "notes": "Food and drinks will be provided."
+  },
+  "payments": {
+    "venmoUsername": "Julian-Stock-1",
+    "defaultNote": "Congratulations Elise!"
+  },
+      "rsvp": {
+    "enabled": true,
+    "title": "RSVP",
+    "embedUrl": " https://docs.google.com/forms/d/e/1FAIpQLSc9rI1ayVa1ekhPRs0wBd-2qXaBfD5DlnzzzlcceBMbHwicdg/viewform?usp=pp_url&entry.285082633=ML610&embedded=true",
+    "openUrl": " https://docs.google.com/forms/d/e/1FAIpQLSc9rI1ayVa1ekhPRs0wBd-2qXaBfD5DlnzzzlcceBMbHwicdg/viewform?usp=pp_url&entry.285082633=ML610"
+   
+  }
+}
