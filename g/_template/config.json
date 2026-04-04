@@ -1,0 +1,44 @@
+
+{
+  "graduate": {
+    "name": "Name of Graduate",
+    "headline": "name of  High School Class of year",
+    "school": "full name of high school",
+    "year": "graduation year",
+    "about": "brief description about the graduate, their future plans, and any other information you'd like to share.",
+    "about2": "use this if twins or multiple graduates to share information about the other graduate(s)."
+  },
+  "photos": [
+    {
+      "src": "./photos/photo01.jpg",
+      "alt": "name of graduate or description of photo"
+    },
+    {
+      "src": "./photos/photo02.jpg",
+      "alt": "name of graduate or description of photo"
+    },
+    {
+      "src": "./photos/photo03.jpg",
+      "alt": "name of graduate or description of photo"
+    }
+  ],
+  "party": {
+    "title": "Graduation Party",
+    "date": "Day of the party",
+    "time": "3:00 PM – 12:00 PM",
+    "locationName": "location of the party",
+    "address": "full address of the party location",
+    "notes": "any additional notes about the party, such as dress code, if food and drinks will be provided, etc."
+  },
+  "payments": {
+    "venmoUsername": "Joe-Cook-5576",
+    "defaultNote": "Congratulations Morgan and Madison!"
+  },
+      "rsvp": {
+    "enabled": true,
+    "title": "RSVP",
+    "embedUrl": " https://docs.google.com/forms/d/e/1FAIpQLSc9rI1ayVa1ekhPRs0wBd-2qXaBfD5DlnzzzlcceBMbHwicdg/viewform?usp=pp_url&entry.285082633=BP055&embedded=true",
+    "openUrl": " https://docs.google.com/forms/d/e/1FAIpQLSc9rI1ayVa1ekhPRs0wBd-2qXaBfD5DlnzzzlcceBMbHwicdg/viewform?usp=pp_url&entry.285082633=BP055"
+   
+  }
+}
