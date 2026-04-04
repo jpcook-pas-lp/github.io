@@ -1,0 +1,44 @@
+
+{
+  "graduate": {
+    "name": "Scotlyn Paxton",
+    "headline": "Bethel Park Class of 2026",
+    "school": "Bethel Park High School",
+    "year": "2026",
+    "about": "Scotlyn will be attending Lake Forest College in the Fall, playing lacrosse and studying Sports Management.",
+    "about2": ""
+  },
+  "photos": [
+    {
+      "src": "./photos/photo01.jpg",
+      "alt": "Scotlyn Paxton"
+    },
+    {
+      "src": "./photos/photo02.jpg",
+      "alt": "Scotlyn Paxton"
+    },
+    {
+      "src": "./photos/photo03.jpg",
+      "alt": "Scotlyn Paxton"
+    }
+  ],
+  "party": {
+    "title": "Graduation Party",
+    "date": "June 19th 2026",
+    "time": "3:00 PM – 12:00 PM",
+    "locationName": "Paxton Family Home",
+    "address": "5370 Madison Avenue, Bethel Park, PA 15102",
+    "notes": "Foodand drinks will be provided"
+  },
+  "payments": {
+    "venmoUsername": "Colleen-Paxton-2",
+    "defaultNote": "Congratulations Scotlyn!"
+  },
+      "rsvp": {
+    "enabled": true,
+    "title": "RSVP",
+    "embedUrl": " https://docs.google.com/forms/d/e/1FAIpQLSc9rI1ayVa1ekhPRs0wBd-2qXaBfD5DlnzzzlcceBMbHwicdg/viewform?usp=pp_url&entry.285082633=BP910&embedded=true",
+    "openUrl": " https://docs.google.com/forms/d/e/1FAIpQLSc9rI1ayVa1ekhPRs0wBd-2qXaBfD5DlnzzzlcceBMbHwicdg/viewform?usp=pp_url&entry.285082633=BP910"
+   
+  }
+}
