@@ -5,8 +5,8 @@
     "headline": "Bethel Park High School Class of 2026",
     "school": "Bethel Park High School",
     "year": "2026",
-    "about": "Morgan will be attending Ohio Northern University in the Fall and playing lacrosse and studying Sports Medicine.",
-    "about2": "Madison will be attending Slippery Rock University and studying secondary education."
+    "about": "Morgan will be attending Ohio Northern University in the Fall, playing lacrosse and studying Sports Medicine.",
+    "about2": "Madison will be attending Slippery Rock University in the Fall and studying Secondary Education."
   },
   "photos": [
     {
@@ -25,10 +25,10 @@
   "party": {
     "title": "Graduation Party",
     "date": "Saturday, June 27, 2026",
-    "time": "3:00 PM – 12:00 PM",
+    "time": "3:00 PM – ",
     "locationName": "Cook Family Home",
     "address": "5576 Glen Hill Drive, Bethel Park, PA 15102",
-    "notes": "Food and drinks will be provided. Casual dress."
+    "notes": "Food and drinks will be provided."
   },
   "payments": {
     "venmoUsername": "Joe-Cook-5576",

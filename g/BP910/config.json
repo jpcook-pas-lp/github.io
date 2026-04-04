@@ -25,10 +25,10 @@
   "party": {
     "title": "Graduation Party",
     "date": "June 19th 2026",
-    "time": "3:00 PM – 12:00 PM",
+    "time": "3:00 PM – ",
     "locationName": "Paxton Family Home",
     "address": "5370 Madison Avenue, Bethel Park, PA 15102",
-    "notes": "Foodand drinks will be provided"
+    "notes": "Food and drinks will be provided"
   },
   "payments": {
     "venmoUsername": "Colleen-Paxton-2",
