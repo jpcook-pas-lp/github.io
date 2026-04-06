@@ -25,7 +25,7 @@
   "party": {
     "title": "Graduation Party",
     "date": "Saturday, June 27, 2026",
-    "time": "3:00 PM – ",
+    "time": "3:00 PM",
     "locationName": "Cook Family Home",
     "address": "5576 Glen Hill Drive, Bethel Park, PA 15102",
     "notes": "Food and drinks will be provided."
@@ -36,7 +36,7 @@
   },
       "rsvp": {
     "enabled": true,
-    "title": "RSVP",
+    "title": "RSVP by June 20th",
     "embedUrl": " https://docs.google.com/forms/d/e/1FAIpQLSc9rI1ayVa1ekhPRs0wBd-2qXaBfD5DlnzzzlcceBMbHwicdg/viewform?usp=pp_url&entry.285082633=BP055&embedded=true",
     "openUrl": " https://docs.google.com/forms/d/e/1FAIpQLSc9rI1ayVa1ekhPRs0wBd-2qXaBfD5DlnzzzlcceBMbHwicdg/viewform?usp=pp_url&entry.285082633=BP055"
    
