@@ -1,0 +1,36 @@
+
+{
+  "graduate": {
+    "name": "Chelsea Hudak",
+    "headline": "Bethel Park High School, Class of 2026",
+    "school": "Bethel Park High School",
+    "year": "2026",
+    "about": "Chelsea is going to attend Penn State University in the Fall and study Early Childhood Education.",
+    "about2": ""
+  },
+  "photos": [
+    {
+      "src": "./photos/photo01.jpg",
+      "alt": "Chelsea Hudak"
+    }
+  ],
+  "party": {
+    "title": "Graduation Party",
+    "date": "June 6th",
+    "time": "3:00 PM – 8:00 PM",
+    "locationName": "Spreading Oak Shelter in South Park (Located by BMX Track)",
+    "address": "East Park Drive Pittsburgh, PA 15236",
+    "notes": "Food and Beverages will be provided"
+  },
+  "payments": {
+    "venmoUsername": "@MikeHudak",
+    "defaultNote": "Congratulations Chelsea!"
+  },
+      "rsvp": {
+    "enabled": true,
+    "title": "RSVP",
+    "embedUrl": " https://docs.google.com/forms/d/e/1FAIpQLSc9rI1ayVa1ekhPRs0wBd-2qXaBfD5DlnzzzlcceBMbHwicdg/viewform?usp=pp_url&entry.285082633=BP310&embedded=true",
+    "openUrl": " https://docs.google.com/forms/d/e/1FAIpQLSc9rI1ayVa1ekhPRs0wBd-2qXaBfD5DlnzzzlcceBMbHwicdg/viewform?usp=pp_url&entry.285082633=BP310"
+   
+  }
+}
